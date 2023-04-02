@@ -1,0 +1,17 @@
+upstream node-exporter {
+  server 127.0.0.1:9100;
+}
+
+server {  
+    listen [server-ip]:9100;
+  
+  server_name  _;
+  access_log off;
+  error_log /var/log/nginx/exporter_error.log;
+  auth_basic "restricted";
+  auth_basic_user_file /etc/nginx/auth.file;
+
+  location / {
+    proxy_pass        http://node-exporter;
+  }
+}
