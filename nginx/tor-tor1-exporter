@@ -1,0 +1,17 @@
+upstream tor-tor1-exporter {
+  server 127.0.0.1:9035; #Port evtl. anpassen wenn mehrere relays auf dem Server laufen
+}
+
+server {
+    listen <deine IP>:9035; #IP auf den zu überwachenden Server anpassen, Port evtl. anpassen wenn mehrere relays laufen
+
+  server_name  _;
+  access_log off;
+  error_log /var/log/nginx/exporter_error.log;
+  auth_basic "restricted";
+  auth_basic_user_file /etc/nginx/auth.file;
+
+  location / {
+    proxy_pass        http://tor-tor1-exporter;
+  }
+}
