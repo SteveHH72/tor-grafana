@@ -1,0 +1,18 @@
+Um eine Überwachung für Eure Tor relays mit Grafana einzurichten braucht es einiger Vorarbeit - diese werden wir hier durchgehen. 
+
+Fokgende Software wird benötigt:
+
+Auf dem Überwachungsserver:
+
+- Docker
+- Docker Compose
+- Prometheus
+- Grafana
+- evtl. Portainer
+
+Auf dem relay:
+
+- Nginx
+- prometheus-node-exporter
+- apache2-utils
+
