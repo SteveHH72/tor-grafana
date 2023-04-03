@@ -1,4 +1,4 @@
-upstream tor-tor1-exporter {
+upstream tor-tor3-exporter {
   server 127.0.0.1:9037; #Port evtl. anpassen wenn mehrere relays auf dem Server laufen
 }
 
