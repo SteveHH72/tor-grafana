@@ -4,6 +4,8 @@ Monitoring TOR relays mit Grafana
 
 Eine gute Möglichkeit um seine TOR relays zu überwachen (Bandbreite, Verbindungen usw.) ist Grafana. 
 Da man einige Dinge beachten und einrichten muss um TOR relays mit Grafana überwachen zu können habe ich einmal alles zusammengestellt und beschrieben was man machen muss um das ganze aufzusetzen. 
+Hier findet Ihr alle Dateien / Scripte die Ihr benötigt um 4 relays auf einem Server zu überwachen. 
+Aktuell kann man auf einem Server mit 1 IP vier relays laufen lassen.
 
 Wenn Ihr Fragen habt könnt Ihr mich gerne unter relay7791@gmail.com - ich bin euch gerne behilflich. 
 
@@ -27,3 +29,6 @@ Bei Nutzung von Docker:
 
 
 Diese Beschreibung ist für einen Server mit Debian gedacht - bei RHEL etc. können einige Dinge anders sein. 
+
+
+Das Grundgerüst stammt von bauruine
