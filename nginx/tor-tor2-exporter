@@ -12,6 +12,6 @@ server {
   auth_basic_user_file /etc/nginx/auth.file;
 
   location / {
-    proxy_pass        http://tor-tor1-exporter;
+    proxy_pass        http://tor-tor2-exporter;
   }
 }
