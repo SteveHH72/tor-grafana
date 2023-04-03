@@ -1,0 +1,45 @@
+Bevor du nginx installierst, musst du dein System aktualisieren, damit es auf dem neuesten Stand ist. Außerdem solltest du zusätzliche Pakete installieren, 
+die für die Kompilierung von Modulen von Drittanbietern benötigt werden. 
+Führe die folgenden Befehle aus, um das System zu aktualisieren und die benötigten Pakete zu installieren:
+
+sudo apt update -y && sudo apt upgrade -y
+
+sudo apt install curl gnupg2 ca-certificates lsb-release
+
+sudo apt install nginx -y
+
+Nach diesem Installationsschritt sollte der Nginx Server schon laufen - das kannst Du ausprobieren wenn Du diesen Befehl eingibst: 
+
+sudo systemctl status nginx
+
+Wenn dort bei der Ausgabe "Active: active (running)" steht habt Ihr bisher alles richtig gemacht !
+
+Damit der Server automatisch startet wenn der Server zum Beispiel einen Reboot durchführt müsst Ihr folgenden Befehl eingeben: 
+
+sudo systemctl enable nginx
+
+Umd die Nginx Konfiguration auf eventuelle Fehler zu prüfen müsst Ihr diesen Befehl eingeben: 
+
+sudo nginx -t
+
+Eventuell müsst Ihr nun noch eure Firewall anpassen - bei der ufw Firewall ist das sehr einfach: 
+
+Du musst folgendes eingeben: 
+
+sudo uf app list
+
+Damit erhältst Du eine Liste der vorgefertigten Regelprofile die in ufw vorhanden sind. 
+
+Dort kann man sehen das es 3 verschiedene Nginx Profile gibt - diese bedeuten im einzelnen: 
+
+Nginx Full: Dieses Profil öffnet sowohl Port 80 als auch 443 für Nginx
+Nginx HTTP: Dieses Profil öffnet nur Port 80 für Nginx
+Nginx HTTPS: Dieses Profil öffnet nur Port 443 für Nginx
+
+Da wir unter Umständen den Port 443 als ORPort nutzen (je nachdem wie Du dein relay konfiguriert hast) musst Du in diesem Fall 
+
+"Nginx Full" nehmen. 
+
+
+
+Es macht auf jeden Fall Sinn eine Firewall wie ufw zu installieren - wie das geht schreibe ich dir in der "Installation UFW"
