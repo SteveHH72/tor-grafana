@@ -1,0 +1,9 @@
+In der Torrc-Datei müsst Ihr nur den MetricsPort aktivieren so das euer tor-relay die benötigten Daten liefert. 
+
+Dafür braucht Ihr nur zwei Zeilen: 
+
+MetricsPort 127.0.0.1:9035
+MetricsPortPolicy accept 127.0.0.1
+
+Solltet Ihr auf eurem Server mehr als 1 relay betreiben (pro IP sind 4 relays möglich) müsst Ihr den Port (in diesem Fall 9035) entsprechend anpassen so das jedes relay
+seinen eigenen MetricsPort bekommt. 
