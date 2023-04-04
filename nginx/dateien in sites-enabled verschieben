@@ -1,0 +1,5 @@
+Nachdem Ihr die node-exporter sowie die tor-exporter Dateien in /etc/nginx/sites-available/ erstellt habt müsst Ihr nur noch einen Hardlink für 
+/etc/nginx/sites-enable/ erstellen - das macht Ihr mit folgendem Befehl: 
+
+ln -s /etc/nginx/sites-available/node-exporter /etc/nginx/sites-enabled/ 
+
