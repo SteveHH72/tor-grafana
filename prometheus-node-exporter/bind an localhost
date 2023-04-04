@@ -1,0 +1,5 @@
+Damit der Prometheus-node-exporter funktioniert müsst Ihr noch den localhost in dem File definieren. 
+
+Ihr müsst in die Datei /etc/default/prometheus-node-exporter einfach folgende Zeile einfügen: 
+
+ARGS="--web.listen-address=127.0.0.1:9100"
