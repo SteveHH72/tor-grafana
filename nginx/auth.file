@@ -1,0 +1,10 @@
+Um ein auth.file zu erstellen damit Eure Daten nicht unverschlüsselt für jedermann im Netz hängen und abgegriffen werden können, müsst Ihr 
+als erstes die apache2-utils installieren. 
+
+Das auth.file muss in /etc/nginx/ vorhanden sein !
+
+Um ein auth.file zu erstellen braucht Ihr folgenden Befehl: 
+
+htpasswd -c auth.file promnode
+
+Danach werdet Ihr nach einem neuen Passwort für den User "promnode" der erstellt wird gefragt. Dieses müsst Ihr noch ein mal bestätigen und dann seid Ihr fertig.
